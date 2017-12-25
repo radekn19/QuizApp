@@ -14,14 +14,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20dp"
             android:layout_marginBottom="5dp"
-            android:textSize="23sp"
-            android:textColor="@android:color/white"
             android:background="#607D8B"
             android:focusable="true"
             android:focusableInTouchMode="true"
-            android:text="How Well Do You Know The EU leaders?"/>
+            android:padding="20dp"
+            android:text="@string/how_well_do_you_know_the_eu_leaders"
+            android:textColor="@android:color/white"
+            android:textSize="23sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,23 +31,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
                 android:padding="10dp"
-                android:text="Your name :"/>
+                android:text="@string/your_name"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/editCustomerName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:background="@android:color/white"
-                android:padding="10dp"
                 android:layout_marginBottom="5dp"
                 android:layout_marginRight="5dp"
-                android:inputType="text"
+                android:background="@android:color/white"
+                android:hint="@string/enter_your_name"
                 android:imeOptions="actionDone"
-                android:hint="Enter your name"/>
+                android:inputType="text"
+                android:padding="10dp"
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -56,8 +56,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/eu_back"
             android:layout_marginBottom="5dp"
+            android:background="@drawable/eu_back"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -83,53 +83,53 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:textSize="20sp"
+                android:text="@string/who_is_a_members_of_the_european_council"
                 android:textColor="@android:color/black"
-                android:textStyle="italic"
-                android:text="Who is a members of the European Council?" />
+                android:textSize="20sp"
+                android:textStyle="italic" />
 
-                <CheckBox
-                    android:id="@+id/eu_charles_michel"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#607D8B"
-                    android:textSize="16sp"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="25dp"
-                    android:drawableLeft="@drawable/eu_charles_michel"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"
-                    android:text="Charles Michel" />
+            <CheckBox
+                android:id="@+id/eu_charles_michel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="25dp"
+                android:background="#607D8B"
+                android:drawableLeft="@drawable/eu_charles_michel"
+                android:text=" Charles Michel"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-                <CheckBox
-                    android:id="@+id/eu_donald_tusk_pr"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"
-                    android:background="#607D8B"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="25dp"
-                    android:drawableLeft="@drawable/eu_donald_tusk_pr"
-                    android:text=" Donald Franciszek Tusk" />
+            <CheckBox
+                android:id="@+id/eu_donald_tusk_pr"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#607D8B"
+                android:drawableLeft="@drawable/eu_donald_tusk_pr"
+                android:text=" Donald Franciszek Tusk"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-                <CheckBox
-                    android:id="@+id/eu_antonio_tajani"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="25dp"
-                    android:layout_marginBottom="25dp"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"
-                    android:background="#607D8B"
-                    android:drawableLeft="@drawable/eu_antonio_tajani"
-                    android:text=" Antonio Tajani " />
+            <CheckBox
+                android:id="@+id/eu_antonio_tajani"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#607D8B"
+                android:drawableLeft="@drawable/eu_antonio_tajani"
+                android:text=" Antonio Tajani "
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
@@ -139,8 +139,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/council_back"
             android:layout_marginBottom="5dp"
+            android:background="@drawable/council_back"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -166,22 +166,21 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:textSize="20sp"
+                android:text="@string/what_is_the_name_of_the_presidency_of_the_council_of_the_european_union"
                 android:textColor="@android:color/black"
-                android:textStyle="italic"
-                android:text="What is the name of the presidency of the Council of the European Union?"
-                />
+                android:textSize="20sp"
+                android:textStyle="italic" />
 
             <EditText
                 android:id="@+id/editNameOfCouncilPresident"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
-                android:padding="10dp"
                 android:background="@android:color/darker_gray"
+                android:hint="@string/type_your_answer_here"
                 android:inputType="text"
-                android:textColorHint="@android:color/white"
-                android:hint="Type your answer here"/>
+                android:padding="10dp"
+                android:textColorHint="@android:color/white" />
         </LinearLayout>
 
         //Question 3
@@ -189,8 +188,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/fr_eiffel_tower"
             android:layout_marginBottom="5dp"
+            android:background="@drawable/fr_eiffel_tower"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -216,11 +215,10 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:textSize="20sp"
+                android:text="@string/what_is_the_name_of_the_president_of_france"
                 android:textColor="@android:color/black"
-                android:textStyle="italic"
-                android:text="What is the name of the president of France?"
-                />
+                android:textSize="20sp"
+                android:textStyle="italic" />
 
             <RadioGroup
                 android:id="@+id/frRadioGroup"
@@ -232,36 +230,36 @@
                     android:id="@+id/fr_kersti_kaljulaid"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#607D8B"
-                    android:textSize="16sp"
                     android:layout_marginBottom="10dp"
+                    android:background="#607D8B"
                     android:drawableLeft="@drawable/fr_kersti_kaljulaid"
-                    android:textStyle="bold"
+                    android:text="  Kersti Kaljulaid "
                     android:textColor="#FFFFFF"
-                    android:text="  Kersti Kaljulaid " />
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/fr_klaus_werner_iohannis"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"
-                    android:background="#607D8B"
                     android:layout_marginBottom="10dp"
+                    android:background="#607D8B"
                     android:drawableLeft="@drawable/fr_klaus_werner_iohannis"
-                    android:text="  Klaus Werner Iohannis" />
+                    android:text="  Klaus Werner Iohannis"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/fr_emmanuel_macron_pr"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"
                     android:background="#607D8B"
                     android:drawableLeft="@drawable/fr_emmanuel_macron_pr"
-                    android:text="  Emmanuel Macron " />
+                    android:text="  Emmanuel Macron "
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
             </RadioGroup>
 
         </LinearLayout>
@@ -271,8 +269,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/cz_back"
             android:layout_marginBottom="5dp"
+            android:background="@drawable/cz_back"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -297,11 +295,10 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:textSize="20sp"
+                android:text="@string/what_is_the_name_of_the_president_of_czech_republic"
                 android:textColor="@android:color/black"
-                android:textStyle="italic"
-                android:text="What is the name of the president of Czech Republic?"
-                />
+                android:textSize="20sp"
+                android:textStyle="italic" />
 
 
             <RadioGroup
@@ -314,36 +311,36 @@
                     android:id="@+id/cz_filip_vujanovic"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#607D8B"
-                    android:textSize="16sp"
                     android:layout_marginBottom="10dp"
+                    android:background="#607D8B"
                     android:drawableLeft="@drawable/cz_filip_vujanovic"
-                    android:textStyle="bold"
+                    android:text="  Filip Vujanovic"
                     android:textColor="#FFFFFF"
-                    android:text="  Filip Vujanovic" />
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/cz_milos_zeman_pr"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"
-                    android:background="#607D8B"
                     android:layout_marginBottom="10dp"
+                    android:background="#607D8B"
                     android:drawableLeft="@drawable/cz_milos_zeman_pr"
-                    android:text="  Milos Zeman" />
+                    android:text="  Milos Zeman"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/cz_kolinda_grabar_kitarovic"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"
                     android:background="#607D8B"
                     android:drawableLeft="@drawable/cz_kolinda_grabar_kitarovic"
-                    android:text="  Kolinda Grabar Kitarovic" />
+                    android:text="  Kolinda Grabar Kitarovic"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
             </RadioGroup>
         </LinearLayout>
 
@@ -352,8 +349,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/de_back"
             android:layout_marginBottom="5dp"
+            android:background="@drawable/de_back"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -378,11 +375,10 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:textSize="20sp"
+                android:text="@string/what_is_the_name_of_the_president_of_germany"
                 android:textColor="@android:color/black"
-                android:textStyle="italic"
-                android:text="What is the name of the president of Germany?"
-                />
+                android:textSize="20sp"
+                android:textStyle="italic" />
 
             <RadioGroup
                 android:id="@+id/deRadioGroup"
@@ -394,36 +390,36 @@
                     android:id="@+id/de_angela_dorothea_merkel"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#607D8B"
-                    android:textSize="16sp"
                     android:layout_marginBottom="10dp"
+                    android:background="#607D8B"
                     android:drawableLeft="@drawable/de_angela_dorothea_merkel"
-                    android:textStyle="bold"
+                    android:text="  Angela Dorothea Merkel"
                     android:textColor="#FFFFFF"
-                    android:text="  Angela Dorothea Merkel" />
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/de_alexander_van_der_bellen"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"
-                    android:background="#607D8B"
                     android:layout_marginBottom="10dp"
+                    android:background="#607D8B"
                     android:drawableLeft="@drawable/de_alexander_van_der_bellen"
-                    android:text="  Alexander Van der Bellen" />
+                    android:text="  Alexander Van der Bellen"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/de_frank_walter_steinmeier_pr"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"
                     android:background="#607D8B"
                     android:drawableLeft="@drawable/de_frank_walter_steinmeier_pr"
-                    android:text="  Frank Walter Steinmeier" />
+                    android:text="  Frank Walter Steinmeier"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
             </RadioGroup>
         </LinearLayout>
 
@@ -432,8 +428,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/it_back"
             android:layout_marginBottom="5dp"
+            android:background="@drawable/it_back"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -458,11 +454,10 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:textSize="20sp"
+                android:text="@string/what_is_the_name_of_the_president_of_italy"
                 android:textColor="@android:color/black"
-                android:textStyle="italic"
-                android:text="What is the name of the president of Italy?"
-                />
+                android:textSize="20sp"
+                android:textStyle="italic" />
 
             <RadioGroup
                 android:id="@+id/itRadioGroup"
@@ -474,36 +469,36 @@
                     android:id="@+id/it_sergio_mattarella_pr"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#607D8B"
-                    android:textSize="16sp"
                     android:layout_marginBottom="10dp"
+                    android:background="#607D8B"
                     android:drawableLeft="@drawable/it_sergio_mattarella_pr"
-                    android:textStyle="bold"
+                    android:text="  Sergio Mattarella"
                     android:textColor="#FFFFFF"
-                    android:text="  Sergio Mattarella" />
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/it_michael_daniel_higgins"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"
-                    android:background="#607D8B"
                     android:layout_marginBottom="10dp"
+                    android:background="#607D8B"
                     android:drawableLeft="@drawable/it_michael_daniel_higgins"
-                    android:text=" Michael Daniel Higgins" />
+                    android:text=" Michael Daniel Higgins"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/it_dalia_grybauskaite"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"
                     android:background="#607D8B"
                     android:drawableLeft="@drawable/it_dalia_grybauskaite"
-                    android:text="  Dalia Grybauskaite" />
+                    android:text="  Dalia Grybauskaite"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
             </RadioGroup>
         </LinearLayout>
 
@@ -512,8 +507,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/lv_back"
             android:layout_marginBottom="5dp"
+            android:background="@drawable/lv_back"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -538,11 +533,10 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:textSize="20sp"
+                android:text="@string/what_is_the_name_of_the_president_of_latvia"
                 android:textColor="@android:color/black"
-                android:textStyle="italic"
-                android:text="What is the name of the president of Latvia?"
-                />
+                android:textSize="20sp"
+                android:textStyle="italic" />
 
             <RadioGroup
                 android:id="@+id/lvRadioGroup"
@@ -554,36 +548,36 @@
                     android:id="@+id/lv_igor_dodon"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#607D8B"
-                    android:textSize="16sp"
                     android:layout_marginBottom="10dp"
+                    android:background="#607D8B"
                     android:drawableLeft="@drawable/lv_igor_dodon"
-                    android:textStyle="bold"
+                    android:text="  Igor Dodon"
                     android:textColor="#FFFFFF"
-                    android:text="  Igor Dodon" />
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/lv_hashim_thaci"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"
-                    android:background="#607D8B"
                     android:layout_marginBottom="10dp"
+                    android:background="#607D8B"
                     android:drawableLeft="@drawable/lv_hashim_thaci"
-                    android:text="  Hashim Thaci" />
+                    android:text="  Hashim Thaci"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/lv_raimonds_vejonis_pr"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"
                     android:background="#607D8B"
                     android:drawableLeft="@drawable/lv_raimonds_vejonis_pr"
-                    android:text="  Raimonds Vejonis" />
+                    android:text="  Raimonds Vejonis"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
             </RadioGroup>
         </LinearLayout>
 
@@ -592,8 +586,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/pl_bacgr"
             android:layout_marginBottom="5dp"
+            android:background="@drawable/pl_bacgr"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -618,11 +612,10 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:textSize="20sp"
+                android:text="@string/what_is_the_name_of_the_president_of_poland"
                 android:textColor="@android:color/black"
-                android:textStyle="italic"
-                android:text="What is the name of the president of Poland?"
-                />
+                android:textSize="20sp"
+                android:textStyle="italic" />
 
             <RadioGroup
                 android:id="@+id/plRadioGroup"
@@ -634,36 +627,36 @@
                     android:id="@+id/pl_rumen_georgiew_radew"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#607D8B"
-                    android:textSize="16sp"
                     android:layout_marginBottom="10dp"
+                    android:background="#607D8B"
                     android:drawableLeft="@drawable/pl_rumen_georgiew_radew"
-                    android:textStyle="bold"
+                    android:text="  Rumen Georgiew Radew"
                     android:textColor="#FFFFFF"
-                    android:text="  Rumen Georgiew Radew" />
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/pl_andrzej_sebastian_duda_pr"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"
-                    android:background="#607D8B"
                     android:layout_marginBottom="10dp"
+                    android:background="#607D8B"
                     android:drawableLeft="@drawable/pl_andrzej_sebastian_duda_pr"
-                    android:text="  Andrzej Sebastian Duda" />
+                    android:text="  Andrzej Sebastian Duda"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/pl_prokopis_pawlopulos"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"
                     android:background="#607D8B"
                     android:drawableLeft="@drawable/pl_prokopis_pawlopulos"
-                    android:text="  Prokopis Pawlopulos" />
+                    android:text="  Prokopis Pawlopulos"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
             </RadioGroup>
         </LinearLayout>
 
@@ -672,8 +665,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/ua_back"
             android:layout_marginBottom="5dp"
+            android:background="@drawable/ua_back"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -698,11 +691,10 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:textSize="20sp"
+                android:text="@string/what_is_the_name_of_the_president_of_ukraine"
                 android:textColor="@android:color/black"
-                android:textStyle="italic"
-                android:text="What is the name of the president of Ukraine?"
-                />
+                android:textSize="20sp"
+                android:textStyle="italic" />
 
             <RadioGroup
                 android:id="@+id/uaRadioGroup"
@@ -714,37 +706,36 @@
                     android:id="@+id/ua_ader_janos"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#607D8B"
-                    android:textSize="16sp"
                     android:layout_marginBottom="10dp"
+                    android:background="#607D8B"
                     android:drawableLeft="@drawable/ua_ader_janos"
-                    android:textStyle="bold"
+                    android:text="  Ader Janos"
                     android:textColor="#FFFFFF"
-                    android:text="  Ader Janos" />
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/ua_backpetro_oleksijowycz_poroszenko_pr"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"
-                    android:background="#607D8B"
                     android:layout_marginBottom="10dp"
+                    android:background="#607D8B"
                     android:drawableLeft="@drawable/ua_backpetro_oleksijowycz_poroszenko_pr"
                     android:text="  Backpetro Oleksijowycz  Poroszenko"
-                    />
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/ua_backborut_pahor"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"
                     android:background="#607D8B"
                     android:drawableLeft="@drawable/ua_backborut_pahor"
-                    android:text="  Backborut Pahor" />
+                    android:text="  Backborut Pahor"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
             </RadioGroup>
         </LinearLayout>
 
@@ -762,9 +753,9 @@
                 android:layout_alignParentLeft="true"
                 android:layout_centerHorizontal="true"
                 android:paddingLeft="5dp"
+                android:text=" "
                 android:textColor="@android:color/black"
-                android:textSize="16dp"
-                android:text=" " />
+                android:textSize="16dp" />
 
             <TextView
                 android:id="@+id/scorePoints"
@@ -773,10 +764,10 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerHorizontal="true"
                 android:paddingRight="20dp"
+                android:text=" "
                 android:textColor="@android:color/holo_red_dark"
-                android:textStyle="bold"
                 android:textSize="20dp"
-                android:text=" " />
+                android:textStyle="bold" />
         </RelativeLayout>
 
         // Button submit
@@ -787,7 +778,7 @@
             android:layout_margin="5dp"
             android:background="@android:color/holo_green_light"
             android:onClick="Submit"
-            android:text="Submit"
+            android:text="@string/submit"
             android:textSize="20sp" />
 
     </LinearLayout>

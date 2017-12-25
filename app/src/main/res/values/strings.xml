@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Quiz App</string>
+    <string name="how_well_do_you_know_the_eu_leaders">How Well Do You Know The EU leaders?</string>
+    <string name="who_is_a_members_of_the_european_council">Who is a members of the European Council?</string>
+    <string name="your_name">Your name :</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="what_is_the_name_of_the_presidency_of_the_council_of_the_european_union">What is the name of the presidency of the Council of the European Union?</string>
+    <string name="type_your_answer_here">Type your answer here</string>
+    <string name="what_is_the_name_of_the_president_of_france">What is the name of the president of France?</string>
+    <string name="what_is_the_name_of_the_president_of_czech_republic">What is the name of the president of Czech Republic?</string>
+    <string name="what_is_the_name_of_the_president_of_germany">What is the name of the president of Germany?</string>
+    <string name="what_is_the_name_of_the_president_of_italy">What is the name of the president of Italy?</string>
+    <string name="what_is_the_name_of_the_president_of_latvia">What is the name of the president of Latvia?</string>
+    <string name="what_is_the_name_of_the_president_of_poland">What is the name of the president of Poland?</string>
+    <string name="what_is_the_name_of_the_president_of_ukraine">What is the name of the president of Ukraine?</string>
+    <string name="submit">Submit</string>
 </resources>
