@@ -5,14 +5,19 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    private EditText editTextName,editTextCouncilPresident;
+    private RadioGroup frGroup,czGroup,deGroup,itGroup,lvGroup,plGroup,uaGroup;
+    CheckBox box1,box2,box3;
     private int total=0;
     private int submitCounter=0;
 
@@ -20,12 +25,28 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        getWindow().setSoftInputMode(
+//                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+//        );
+
+        editTextName=findViewById(R.id.editCustomerName);
+        editTextCouncilPresident=findViewById(R.id.editNameOfCouncilPresident);
+
+        box1=findViewById(R.id.eu_charles_michel);
+        box2=findViewById(R.id.eu_donald_tusk_pr);
+        box3=findViewById(R.id.eu_antonio_tajani);
+
+        frGroup=findViewById(R.id.frRadioGroup);
+        czGroup=findViewById(R.id.czRadioGroup);
+        deGroup=findViewById(R.id.deRadioGroup);
+        itGroup=findViewById(R.id.itRadioGroup);
+        lvGroup=findViewById(R.id.lvRadioGroup);
+        plGroup=findViewById(R.id.plRadioGroup);
+        uaGroup=findViewById(R.id.uaRadioGroup);
     }
 
     private void councilMembersBox(){
-        CheckBox box1=findViewById(R.id.eu_charles_michel);
-        CheckBox box2=findViewById(R.id.eu_donald_tusk_pr);
-        CheckBox box3=findViewById(R.id.eu_antonio_tajani);
 
         Context context = getApplicationContext();
         int duration = Toast.LENGTH_LONG;
@@ -73,15 +94,15 @@ public class MainActivity extends AppCompatActivity {
     private void councilPresidentEditText(){
         String p1="Donald Franciszek Tusk";
         String p2="Donald Tusk";
-        EditText name=findViewById(R.id.editNameOfCouncilPresident);
-        String presidentName=name.getText().toString();
+
+        String presidentName=editTextCouncilPresident.getText().toString();
 
         if(p1.equalsIgnoreCase(presidentName)||p2.equalsIgnoreCase(presidentName)){
-            name.setBackgroundColor(Color.GREEN);
+            editTextCouncilPresident.setBackgroundColor(Color.GREEN);
             total+=1;
         }
         else {
-            name.setBackgroundColor(Color.RED);
+            editTextCouncilPresident.setBackgroundColor(Color.RED);
 
         }
 
@@ -208,8 +229,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayScore(){
 
-        EditText rName=findViewById(R.id.editName);
-        String name=rName.getText().toString();
+        String name=editTextName.getText().toString();
         TextView showName=findViewById(R.id.scoreName);
         showName.setText(name+" correct answers was :");
 
@@ -217,26 +237,78 @@ public class MainActivity extends AppCompatActivity {
         score.setText(String.valueOf(total)+" of 7");
     }
 
+    private void allMethods(){
+        councilMembersBox();
+        councilPresidentEditText();
+        frRadio();
+        czRadio();
+        deRadio();
+        itRadio();
+        lvRadio();
+        plRadio();
+        uaRadio();
+        displayScore();
+    }
+
     public void Submit(View view){
+        if(submitCounter==0) {
+            allMethods();
 
-        if(submitCounter==0){
-            councilMembersBox();
-            councilPresidentEditText();
-            frRadio();
-            czRadio();
-            deRadio();
-            itRadio();
-            lvRadio();
-            plRadio();
-            uaRadio();
-            displayScore();
-            submitCounter ++;
+            Context context = getApplicationContext();
+            int duration = Toast.LENGTH_LONG;
+
+            Toast toast = Toast.makeText(context, "Score: " + String.valueOf(total) + " of 7", duration);
+            toast.show();
+
+            submitCounter++;
         }
+    }
 
-        Context context = getApplicationContext();
-        int duration = Toast.LENGTH_LONG;
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
 
-        Toast toast = Toast.makeText(context,"Score: "+String.valueOf(total)+" of 7", duration);
-        toast.show();
+        submitCounter=savedInstanceState.getInt("submitCounter");
+
+        editTextName.setText(savedInstanceState.getString("CustomerName"));
+        editTextCouncilPresident.setText(savedInstanceState.getString("CouncilPresident"));
+
+        box1.setChecked(savedInstanceState.getBoolean("box1"));
+        box2.setChecked(savedInstanceState.getBoolean("box2"));
+        box3.setChecked(savedInstanceState.getBoolean("box3"));
+
+        frGroup.check(savedInstanceState.getInt("FR"));
+        czGroup.check(savedInstanceState.getInt("CZ"));
+        deGroup.check(savedInstanceState.getInt("DE"));
+        itGroup.check(savedInstanceState.getInt("IT"));
+        lvGroup.check(savedInstanceState.getInt("LV"));
+        plGroup.check(savedInstanceState.getInt("PL"));
+        uaGroup.check(savedInstanceState.getInt("UA"));
+
+        if(submitCounter!=0) {
+            allMethods();
+        }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putInt("submitCounter",submitCounter);
+
+        outState.putString("CustomerName",editTextName.getText().toString());
+        outState.putString("CouncilPresident",editTextCouncilPresident.getText().toString());
+
+        outState.putBoolean("box1",box1.isChecked());
+        outState.putBoolean("box2",box2.isChecked());
+        outState.putBoolean("box3",box3.isChecked());
+
+        outState.putInt("FR",frGroup.getCheckedRadioButtonId());
+        outState.putInt("CZ",czGroup.getCheckedRadioButtonId());
+        outState.putInt("DE",deGroup.getCheckedRadioButtonId());
+        outState.putInt("IT",itGroup.getCheckedRadioButtonId());
+        outState.putInt("LV",lvGroup.getCheckedRadioButtonId());
+        outState.putInt("PL",plGroup.getCheckedRadioButtonId());
+        outState.putInt("UA",uaGroup.getCheckedRadioButtonId());
+
+        super.onSaveInstanceState(outState);
     }
 }
+

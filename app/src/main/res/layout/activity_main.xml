@@ -19,6 +19,8 @@
             android:textSize="23sp"
             android:textColor="@android:color/white"
             android:background="#607D8B"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:text="How Well Do You Know The EU leaders?"/>
 
         <LinearLayout
@@ -35,7 +37,7 @@
                 android:text="Your name :"/>
 
             <EditText
-                android:id="@+id/editName"
+                android:id="@+id/editCustomerName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
@@ -44,7 +46,8 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginRight="5dp"
                 android:inputType="text"
-                android:hint="Enter your name" />
+                android:imeOptions="actionDone"
+                android:hint="Enter your name"/>
 
         </LinearLayout>
 
