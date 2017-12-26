@@ -272,7 +272,7 @@ public class MainActivity extends AppCompatActivity {
             Context context = getApplicationContext();
             int duration = Toast.LENGTH_LONG;
 
-            Toast toast = Toast.makeText(context, "Score: " + String.valueOf(total) + " of 7", duration);
+            Toast toast = Toast.makeText(context, "Score: " + String.valueOf(total) + " of 9", duration);
             toast.show();
 
             submitCounter++;

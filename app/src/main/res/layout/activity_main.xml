@@ -84,7 +84,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:text="@string/who_is_a_members_of_the_european_council"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:textSize="20sp"
                 android:textStyle="italic" />
 
@@ -775,7 +775,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_margin="16dp"
             android:background="@android:color/holo_green_light"
             android:onClick="Submit"
             android:text="@string/submit"
