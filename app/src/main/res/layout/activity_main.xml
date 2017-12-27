@@ -15,12 +15,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:background="#607D8B"
+            android:background="@color/backgroundButtons"
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:padding="20dp"
             android:text="@string/how_well_do_you_know_the_eu_leaders"
-            android:textColor="@android:color/white"
+            android:textColor="@color/colorTextQuizTitle"
             android:textSize="23sp" />
 
         <LinearLayout
@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:text="@string/your_name"
-                android:textColor="@android:color/black"
+                android:textColor="@color/colorTextYourName"
                 android:textSize="16sp" />
 
             <EditText
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:layout_marginRight="5dp"
-                android:background="@android:color/white"
+                android:background="@color/colorBackgroundYourName"
                 android:hint="@string/enter_your_name"
                 android:imeOptions="actionDone"
                 android:inputType="text"
@@ -72,7 +72,7 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="15dp"
                     android:text="1/9"
-                    android:textColor="@android:color/holo_red_dark"
+                    android:textColor="@color/colorQuestionNr"
                     android:textSize="15sp" />
 
             </RelativeLayout>
@@ -84,7 +84,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:text="@string/who_is_a_members_of_the_european_council"
-                android:textColor="@android:color/white"
+                android:textColor="@color/colorTextQuestions1"
                 android:textSize="20sp"
                 android:textStyle="italic" />
 
@@ -96,10 +96,10 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginTop="25dp"
-                android:background="#607D8B"
+                android:background="@color/backgroundButtons"
                 android:drawableLeft="@drawable/eu_charles_michel"
                 android:text=" Charles Michel"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/colorTextButtons"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -110,10 +110,10 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
-                android:background="#607D8B"
+                android:background="@color/backgroundButtons"
                 android:drawableLeft="@drawable/eu_donald_tusk_pr"
                 android:text=" Donald Franciszek Tusk"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/colorTextButtons"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -124,10 +124,10 @@
                 android:layout_marginBottom="25dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
-                android:background="#607D8B"
+                android:background="@color/backgroundButtons"
                 android:drawableLeft="@drawable/eu_antonio_tajani"
                 android:text=" Antonio Tajani "
-                android:textColor="#FFFFFF"
+                android:textColor="@color/colorTextButtons"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -155,7 +155,7 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="15dp"
                     android:text="2/9"
-                    android:textColor="@android:color/holo_red_dark"
+                    android:textColor="@color/colorQuestionNr"
                     android:textSize="15sp" />
 
             </RelativeLayout>
@@ -167,7 +167,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:text="@string/what_is_the_name_of_the_presidency_of_the_council_of_the_european_union"
-                android:textColor="@android:color/black"
+                android:textColor="@color/colorTextQuestions2"
                 android:textSize="20sp"
                 android:textStyle="italic" />
 
@@ -176,7 +176,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
-                android:background="@android:color/darker_gray"
+                android:background="@color/backgroundButtons"
                 android:hint="@string/type_your_answer_here"
                 android:inputType="text"
                 android:padding="10dp"
@@ -204,7 +204,7 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="15dp"
                     android:text="3/9"
-                    android:textColor="@android:color/holo_red_dark"
+                    android:textColor="@color/colorQuestionNr"
                     android:textSize="15sp" />
 
             </RelativeLayout>
@@ -216,7 +216,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:text="@string/what_is_the_name_of_the_president_of_france"
-                android:textColor="@android:color/black"
+                android:textColor="@color/colorTextQuestions2"
                 android:textSize="20sp"
                 android:textStyle="italic" />
 
@@ -231,10 +231,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="10dp"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/fr_kersti_kaljulaid"
                     android:text="  Kersti Kaljulaid "
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -243,10 +243,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="10dp"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/fr_klaus_werner_iohannis"
                     android:text="  Klaus Werner Iohannis"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -254,10 +254,10 @@
                     android:id="@+id/fr_emmanuel_macron_pr"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/fr_emmanuel_macron_pr"
                     android:text="  Emmanuel Macron "
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </RadioGroup>
@@ -285,7 +285,7 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="15dp"
                     android:text="4/9"
-                    android:textColor="@android:color/holo_red_dark"
+                    android:textColor="@color/colorQuestionNr"
                     android:textSize="15sp" />
             </RelativeLayout>
 
@@ -296,7 +296,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:text="@string/what_is_the_name_of_the_president_of_czech_republic"
-                android:textColor="@android:color/black"
+                android:textColor="@color/colorTextQuestions2"
                 android:textSize="20sp"
                 android:textStyle="italic" />
 
@@ -312,10 +312,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="10dp"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/cz_filip_vujanovic"
                     android:text="  Filip Vujanovic"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -324,10 +324,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="10dp"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/cz_milos_zeman_pr"
                     android:text="  Milos Zeman"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -335,10 +335,10 @@
                     android:id="@+id/cz_kolinda_grabar_kitarovic"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/cz_kolinda_grabar_kitarovic"
                     android:text="  Kolinda Grabar Kitarovic"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </RadioGroup>
@@ -365,7 +365,7 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="15dp"
                     android:text="5/9"
-                    android:textColor="@android:color/holo_red_dark"
+                    android:textColor="@color/colorQuestionNr"
                     android:textSize="15sp" />
             </RelativeLayout>
 
@@ -376,7 +376,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:text="@string/what_is_the_name_of_the_president_of_germany"
-                android:textColor="@android:color/black"
+                android:textColor="@color/colorTextQuestions2"
                 android:textSize="20sp"
                 android:textStyle="italic" />
 
@@ -391,10 +391,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="10dp"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/de_angela_dorothea_merkel"
                     android:text="  Angela Dorothea Merkel"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -403,10 +403,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="10dp"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/de_alexander_van_der_bellen"
                     android:text="  Alexander Van der Bellen"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -414,10 +414,10 @@
                     android:id="@+id/de_frank_walter_steinmeier_pr"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/de_frank_walter_steinmeier_pr"
                     android:text="  Frank Walter Steinmeier"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </RadioGroup>
@@ -444,7 +444,7 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="15dp"
                     android:text="6/9"
-                    android:textColor="@android:color/holo_red_dark"
+                    android:textColor="@color/colorQuestionNr"
                     android:textSize="15sp" />
             </RelativeLayout>
 
@@ -455,7 +455,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:text="@string/what_is_the_name_of_the_president_of_italy"
-                android:textColor="@android:color/black"
+                android:textColor="@color/colorTextQuestions2"
                 android:textSize="20sp"
                 android:textStyle="italic" />
 
@@ -470,10 +470,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="10dp"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/it_sergio_mattarella_pr"
                     android:text="  Sergio Mattarella"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -482,10 +482,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="10dp"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/it_michael_daniel_higgins"
                     android:text=" Michael Daniel Higgins"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -493,10 +493,10 @@
                     android:id="@+id/it_dalia_grybauskaite"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/it_dalia_grybauskaite"
                     android:text="  Dalia Grybauskaite"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </RadioGroup>
@@ -523,7 +523,7 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="15dp"
                     android:text="7/9"
-                    android:textColor="@android:color/holo_red_dark"
+                    android:textColor="@color/colorQuestionNr"
                     android:textSize="15sp" />
             </RelativeLayout>
 
@@ -534,7 +534,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:text="@string/what_is_the_name_of_the_president_of_latvia"
-                android:textColor="@android:color/black"
+                android:textColor="@color/colorTextQuestions2"
                 android:textSize="20sp"
                 android:textStyle="italic" />
 
@@ -549,10 +549,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="10dp"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/lv_igor_dodon"
                     android:text="  Igor Dodon"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -561,10 +561,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="10dp"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/lv_hashim_thaci"
                     android:text="  Hashim Thaci"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -572,10 +572,10 @@
                     android:id="@+id/lv_raimonds_vejonis_pr"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/lv_raimonds_vejonis_pr"
                     android:text="  Raimonds Vejonis"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </RadioGroup>
@@ -602,7 +602,7 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="15dp"
                     android:text="8/9"
-                    android:textColor="@android:color/holo_red_dark"
+                    android:textColor="@color/colorQuestionNr"
                     android:textSize="15sp" />
             </RelativeLayout>
 
@@ -613,7 +613,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:text="@string/what_is_the_name_of_the_president_of_poland"
-                android:textColor="@android:color/black"
+                android:textColor="@color/colorTextQuestions2"
                 android:textSize="20sp"
                 android:textStyle="italic" />
 
@@ -628,10 +628,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="10dp"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/pl_rumen_georgiew_radew"
                     android:text="  Rumen Georgiew Radew"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -640,10 +640,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="10dp"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/pl_andrzej_sebastian_duda_pr"
                     android:text="  Andrzej Sebastian Duda"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -651,10 +651,10 @@
                     android:id="@+id/pl_prokopis_pawlopulos"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/pl_prokopis_pawlopulos"
                     android:text="  Prokopis Pawlopulos"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </RadioGroup>
@@ -681,7 +681,7 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="15dp"
                     android:text="9/9"
-                    android:textColor="@android:color/holo_red_dark"
+                    android:textColor="@color/colorQuestionNr"
                     android:textSize="15sp" />
             </RelativeLayout>
 
@@ -692,7 +692,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:text="@string/what_is_the_name_of_the_president_of_ukraine"
-                android:textColor="@android:color/black"
+                android:textColor="@color/colorTextQuestions2"
                 android:textSize="20sp"
                 android:textStyle="italic" />
 
@@ -707,10 +707,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="10dp"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/ua_ader_janos"
                     android:text="  Ader Janos"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -719,10 +719,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="10dp"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/ua_backpetro_oleksijowycz_poroszenko_pr"
                     android:text="  Backpetro Oleksijowycz  Poroszenko"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -730,10 +730,10 @@
                     android:id="@+id/ua_backborut_pahor"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#607D8B"
+                    android:background="@color/backgroundButtons"
                     android:drawableLeft="@drawable/ua_backborut_pahor"
                     android:text="  Backborut Pahor"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/colorTextButtons"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </RadioGroup>
@@ -744,6 +744,9 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorBackgroundScoreField"
             android:padding="5dp">
 
             <TextView
@@ -776,7 +779,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:background="@android:color/holo_green_light"
+            android:background="@color/colorSubmitButton"
             android:onClick="Submit"
             android:text="@string/submit"
             android:textSize="20sp" />

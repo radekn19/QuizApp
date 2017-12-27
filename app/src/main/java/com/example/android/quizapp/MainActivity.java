@@ -2,6 +2,7 @@ package com.example.android.quizapp;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -43,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      *
-     *  Methods assigned to questions that change the background color and adding points if the answer was correct
+     *  Methods assigned to questions that change the background color
+     *  and adding points if the answer was correct
      *
      */
 

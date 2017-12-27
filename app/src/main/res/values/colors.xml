@@ -3,4 +3,16 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="backgroundButtons">#607D8B</color>
+    <color name="colorBackgroundYourName">#FFFF</color>
+    <color name="colorSubmitButton">#64DD17</color>
+    <color name="colorQuestionNr">#D50000</color>
+    <color name="colorTextQuizTitle">#FFFFFF</color>
+    <color name="colorTextQuestions1">#FFFFFF</color>
+    <color name="colorTextQuestions2">#000000</color>
+    <color name="colorTextButtons">#FFFFFF</color>
+    <color name="colorTextYourName">#000000</color>
+    <color name="colorBackgroundScoreField">#D1C4E9</color>
+    <color name="colorAnswerWrong">#D50000</color>
+    <color name="colorAnswerCorrect">#00C853</color>
 </resources>
