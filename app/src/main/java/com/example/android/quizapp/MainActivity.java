@@ -20,11 +20,17 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox box1, box2, box3;
     private int total = 0;
     private int submitCounter = 0;
+    private int colorGreen;
+    private int colorRed;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        colorGreen = ContextCompat.getColor(this, R.color.colorAnswerCorrect);
+        colorRed = ContextCompat.getColor(this, R.color.colorAnswerWrong);
 
         editTextName = findViewById(R.id.editCustomerName);
         editTextCouncilPresident = findViewById(R.id.editNameOfCouncilPresident);
@@ -58,35 +64,35 @@ public class MainActivity extends AppCompatActivity {
         int duration = Toast.LENGTH_LONG;
 
         if (box1.isChecked() && box2.isChecked() && box3.isChecked()) {
-            box1.setBackgroundColor(Color.GREEN);
-            box2.setBackgroundColor(Color.GREEN);
-            box3.setBackgroundColor(Color.RED);
+            box1.setBackgroundColor(colorGreen);
+            box2.setBackgroundColor(colorGreen);
+            box3.setBackgroundColor(colorRed);
 
             Toast toast = Toast.makeText(context, "Question 1/9: " +
                     "wrong answer, 0 points", duration);
             toast.show();
         } else if (box1.isChecked() && box2.isChecked()) {
-            box1.setBackgroundColor(Color.GREEN);
-            box2.setBackgroundColor(Color.GREEN);
+            box1.setBackgroundColor(colorGreen);
+            box2.setBackgroundColor(colorGreen);
             total += 1;
         } else if (box1.isChecked() && box3.isChecked()) {
-            box1.setBackgroundColor(Color.GREEN);
-            box3.setBackgroundColor(Color.RED);
+            box1.setBackgroundColor(colorGreen);
+            box3.setBackgroundColor(colorRed);
         } else if (box2.isChecked() && box3.isChecked()) {
-            box2.setBackgroundColor(Color.GREEN);
-            box3.setBackgroundColor(Color.RED);
+            box2.setBackgroundColor(colorGreen);
+            box3.setBackgroundColor(colorRed);
         } else if (box1.isChecked()) {
-            box1.setBackgroundColor(Color.GREEN);
+            box1.setBackgroundColor(colorGreen);
             Toast toast = Toast.makeText(context, "Question 1/9: " +
                     "it's only half the answer, 0 points", duration);
             toast.show();
         } else if (box2.isChecked()) {
-            box2.setBackgroundColor(Color.GREEN);
+            box2.setBackgroundColor(colorGreen);
             Toast toast = Toast.makeText(context, "Question 1/9: " +
                     "it's only half the answer, 0 points", duration);
             toast.show();
         } else if (box3.isChecked()) {
-            box3.setBackgroundColor(Color.RED);
+            box3.setBackgroundColor(colorRed);
         }
     }
 
@@ -100,10 +106,10 @@ public class MainActivity extends AppCompatActivity {
         String presidentName = editTextCouncilPresident.getText().toString();
         if(presidentName!=null) {
             if (p1.equalsIgnoreCase(presidentName) || p2.equalsIgnoreCase(presidentName)) {
-                editTextCouncilPresident.setBackgroundColor(Color.GREEN);
+                editTextCouncilPresident.setBackgroundColor(colorGreen);
                 total += 1;
             } else {
-                editTextCouncilPresident.setBackgroundColor(Color.RED);
+                editTextCouncilPresident.setBackgroundColor(colorRed);
             }
         }
     }
@@ -117,11 +123,11 @@ public class MainActivity extends AppCompatActivity {
         RadioButton radio3 = findViewById(R.id.fr_emmanuel_macron_pr);
 
         if (radio1.isChecked()) {
-            radio1.setBackgroundColor(Color.RED);
+            radio1.setBackgroundColor(colorRed);
         } else if (radio2.isChecked()) {
-            radio2.setBackgroundColor(Color.RED);
+            radio2.setBackgroundColor(colorRed);
         } else if (radio3.isChecked()) {
-            radio3.setBackgroundColor(Color.GREEN);
+            radio3.setBackgroundColor(colorGreen);
             total += 1;
         }
     }
@@ -135,12 +141,12 @@ public class MainActivity extends AppCompatActivity {
         RadioButton radio3 = findViewById(R.id.cz_kolinda_grabar_kitarovic);
 
         if (radio1.isChecked()) {
-            radio1.setBackgroundColor(Color.RED);
+            radio1.setBackgroundColor(colorRed);
         } else if (radio2.isChecked()) {
-            radio2.setBackgroundColor(Color.GREEN);
+            radio2.setBackgroundColor(colorGreen);
             total += 1;
         } else if (radio3.isChecked()) {
-            radio3.setBackgroundColor(Color.RED);
+            radio3.setBackgroundColor(colorRed);
         }
     }
 
@@ -153,11 +159,11 @@ public class MainActivity extends AppCompatActivity {
         RadioButton radio3 = findViewById(R.id.de_frank_walter_steinmeier_pr);
 
         if (radio1.isChecked()) {
-            radio1.setBackgroundColor(Color.RED);
+            radio1.setBackgroundColor(colorRed);
         } else if (radio2.isChecked()) {
-            radio2.setBackgroundColor(Color.RED);
+            radio2.setBackgroundColor(colorRed);
         } else if (radio3.isChecked()) {
-            radio3.setBackgroundColor(Color.GREEN);
+            radio3.setBackgroundColor(colorGreen);
             total += 1;
         }
     }
@@ -171,12 +177,12 @@ public class MainActivity extends AppCompatActivity {
         RadioButton radio3 = findViewById(R.id.it_dalia_grybauskaite);
 
         if (radio1.isChecked()) {
-            radio1.setBackgroundColor(Color.GREEN);
+            radio1.setBackgroundColor(colorGreen);
             total += 1;
         } else if (radio2.isChecked()) {
-            radio2.setBackgroundColor(Color.RED);
+            radio2.setBackgroundColor(colorRed);
         } else if (radio3.isChecked()) {
-            radio3.setBackgroundColor(Color.RED);
+            radio3.setBackgroundColor(colorRed);
         }
     }
 
@@ -189,11 +195,11 @@ public class MainActivity extends AppCompatActivity {
         RadioButton radio3 = findViewById(R.id.lv_raimonds_vejonis_pr);
 
         if (radio1.isChecked()) {
-            radio1.setBackgroundColor(Color.RED);
+            radio1.setBackgroundColor(colorRed);
         } else if (radio2.isChecked()) {
-            radio2.setBackgroundColor(Color.RED);
+            radio2.setBackgroundColor(colorRed);
         } else if (radio3.isChecked()) {
-            radio3.setBackgroundColor(Color.GREEN);
+            radio3.setBackgroundColor(colorGreen);
             total += 1;
         }
     }
@@ -207,12 +213,12 @@ public class MainActivity extends AppCompatActivity {
         RadioButton radio3 = findViewById(R.id.pl_prokopis_pawlopulos);
 
         if (radio1.isChecked()) {
-            radio1.setBackgroundColor(Color.RED);
+            radio1.setBackgroundColor(colorRed);
         } else if (radio2.isChecked()) {
-            radio2.setBackgroundColor(Color.GREEN);
+            radio2.setBackgroundColor(colorGreen);
             total += 1;
         } else if (radio3.isChecked()) {
-            radio3.setBackgroundColor(Color.RED);
+            radio3.setBackgroundColor(colorRed);
         }
     }
 
@@ -225,12 +231,12 @@ public class MainActivity extends AppCompatActivity {
         RadioButton radio3 = findViewById(R.id.ua_backborut_pahor);
 
         if (radio1.isChecked()) {
-            radio1.setBackgroundColor(Color.RED);
+            radio1.setBackgroundColor(colorRed);
         } else if (radio2.isChecked()) {
-            radio2.setBackgroundColor(Color.GREEN);
+            radio2.setBackgroundColor(colorGreen);
             total += 1;
         } else if (radio3.isChecked()) {
-            radio3.setBackgroundColor(Color.RED);
+            radio3.setBackgroundColor(colorRed);
         }
     }
 
