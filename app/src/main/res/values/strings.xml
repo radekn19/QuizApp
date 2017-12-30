@@ -14,4 +14,6 @@
     <string name="what_is_the_name_of_the_president_of_poland">What is the name of the president of Poland?</string>
     <string name="what_is_the_name_of_the_president_of_ukraine">What is the name of the president of Ukraine?</string>
     <string name="submit">Submit</string>
+
+    <string name="question1Toast">Question 1/9: it is only half the answer, 0 points </string>
 </resources>

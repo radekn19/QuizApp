@@ -18,10 +18,15 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextName, editTextCouncilPresident;
     private RadioGroup frGroup, czGroup, deGroup, itGroup, lvGroup, plGroup, uaGroup;
     private CheckBox box1, box2, box3;
+    private RadioButton frRadio1,frRadio2,frRadio3,czRadio1,czRadio2,czRadio3,
+                        deRadio1,deRadio2,deRadio3,itRadio1,itRadio2,itRadio3,
+                        lvRadio1,lvRadio2,lvRadio3,plRadio1,plRadio2,plRadio3,
+                        uaRadio1,uaRadio2,uaRadio3;
     private int total = 0;
     private int submitCounter = 0;
     private int colorGreen;
     private int colorRed;
+    private String question1Toast;
 
 
     @Override
@@ -29,23 +34,88 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        question1Toast = getResources().getString(R.string.question1Toast);
         colorGreen = ContextCompat.getColor(this, R.color.colorAnswerCorrect);
         colorRed = ContextCompat.getColor(this, R.color.colorAnswerWrong);
 
-        editTextName = findViewById(R.id.editCustomerName);
-        editTextCouncilPresident = findViewById(R.id.editNameOfCouncilPresident);
+        /**
+         *
+         * ..........initializing the Views
+         *
+         */
 
+        /**
+         *  user name
+         */
+        editTextName = findViewById(R.id.editCustomerName);
+
+        /**
+         *  Question 1
+         */
         box1 = findViewById(R.id.eu_charles_michel);
         box2 = findViewById(R.id.eu_donald_tusk_pr);
         box3 = findViewById(R.id.eu_antonio_tajani);
 
+        /**
+         *  Question 2
+         */
+        editTextCouncilPresident = findViewById(R.id.editNameOfCouncilPresident);
+
+        /**
+         *  Question 3
+         */
         frGroup = findViewById(R.id.frRadioGroup);
+        frRadio1 = findViewById(R.id.fr_kersti_kaljulaid);
+        frRadio2 = findViewById(R.id.fr_klaus_werner_iohannis);
+        frRadio3 = findViewById(R.id.fr_emmanuel_macron_pr);
+
+        /**
+         *  Question 4
+         */
         czGroup = findViewById(R.id.czRadioGroup);
+        czRadio1 = findViewById(R.id.cz_filip_vujanovic);
+        czRadio2 = findViewById(R.id.cz_milos_zeman_pr);
+        czRadio3 = findViewById(R.id.cz_kolinda_grabar_kitarovic);
+
+        /**
+         *  Question 5
+         */
         deGroup = findViewById(R.id.deRadioGroup);
+        deRadio1= findViewById(R.id.de_angela_dorothea_merkel);
+        deRadio2= findViewById(R.id.de_alexander_van_der_bellen);
+        deRadio3= findViewById(R.id.de_frank_walter_steinmeier_pr);
+
+        /**
+         *  Question 6
+         */
         itGroup = findViewById(R.id.itRadioGroup);
+        itRadio1= findViewById(R.id.it_sergio_mattarella_pr);
+        itRadio2 = findViewById(R.id.it_michael_daniel_higgins);
+        itRadio3 = findViewById(R.id.it_dalia_grybauskaite);
+
+        /**
+         *  Question 7
+         */
         lvGroup = findViewById(R.id.lvRadioGroup);
+        lvRadio1 = findViewById(R.id.lv_igor_dodon);
+        lvRadio2 = findViewById(R.id.lv_hashim_thaci);
+        lvRadio3 = findViewById(R.id.lv_raimonds_vejonis_pr);
+
+        /**
+         *  Question 8
+         */
         plGroup = findViewById(R.id.plRadioGroup);
+        plRadio1 = findViewById(R.id.pl_rumen_georgiew_radew);
+        plRadio2 = findViewById(R.id.pl_andrzej_sebastian_duda_pr);
+        plRadio3 = findViewById(R.id.pl_prokopis_pawlopulos);
+
+        /**
+         *  Question 9
+         */
         uaGroup = findViewById(R.id.uaRadioGroup);
+        uaRadio1 = findViewById(R.id.ua_ader_janos);
+        uaRadio2 = findViewById(R.id.ua_backpetro_oleksijowycz_poroszenko_pr);
+        uaRadio3 = findViewById(R.id.ua_backborut_pahor);
     }
 
     /**
@@ -83,13 +153,11 @@ public class MainActivity extends AppCompatActivity {
             box3.setBackgroundColor(colorRed);
         } else if (box1.isChecked()) {
             box1.setBackgroundColor(colorGreen);
-            Toast toast = Toast.makeText(context, "Question 1/9: " +
-                    "it's only half the answer, 0 points", duration);
+            Toast toast = Toast.makeText(context,question1Toast, duration);
             toast.show();
         } else if (box2.isChecked()) {
             box2.setBackgroundColor(colorGreen);
-            Toast toast = Toast.makeText(context, "Question 1/9: " +
-                    "it's only half the answer, 0 points", duration);
+            Toast toast = Toast.makeText(context,question1Toast, duration);
             toast.show();
         } else if (box3.isChecked()) {
             box3.setBackgroundColor(colorRed);
@@ -118,16 +186,12 @@ public class MainActivity extends AppCompatActivity {
      *  Question 3
      */
     private void frRadio() {
-        RadioButton radio1 = findViewById(R.id.fr_kersti_kaljulaid);
-        RadioButton radio2 = findViewById(R.id.fr_klaus_werner_iohannis);
-        RadioButton radio3 = findViewById(R.id.fr_emmanuel_macron_pr);
-
-        if (radio1.isChecked()) {
-            radio1.setBackgroundColor(colorRed);
-        } else if (radio2.isChecked()) {
-            radio2.setBackgroundColor(colorRed);
-        } else if (radio3.isChecked()) {
-            radio3.setBackgroundColor(colorGreen);
+        if (frRadio1.isChecked()) {
+            frRadio1.setBackgroundColor(colorRed);
+        } else if (frRadio2.isChecked()) {
+            frRadio2.setBackgroundColor(colorRed);
+        } else if (frRadio3.isChecked()) {
+            frRadio3.setBackgroundColor(colorGreen);
             total += 1;
         }
     }
@@ -136,17 +200,13 @@ public class MainActivity extends AppCompatActivity {
      *  Question 4
      */
     private void czRadio() {
-        RadioButton radio1 = findViewById(R.id.cz_filip_vujanovic);
-        RadioButton radio2 = findViewById(R.id.cz_milos_zeman_pr);
-        RadioButton radio3 = findViewById(R.id.cz_kolinda_grabar_kitarovic);
-
-        if (radio1.isChecked()) {
-            radio1.setBackgroundColor(colorRed);
-        } else if (radio2.isChecked()) {
-            radio2.setBackgroundColor(colorGreen);
+        if (czRadio1.isChecked()) {
+            czRadio1.setBackgroundColor(colorRed);
+        } else if (czRadio2.isChecked()) {
+            czRadio2.setBackgroundColor(colorGreen);
             total += 1;
-        } else if (radio3.isChecked()) {
-            radio3.setBackgroundColor(colorRed);
+        } else if (czRadio3.isChecked()) {
+            czRadio3.setBackgroundColor(colorRed);
         }
     }
 
@@ -154,16 +214,12 @@ public class MainActivity extends AppCompatActivity {
      *  Question 5
      */
     private void deRadio() {
-        RadioButton radio1 = findViewById(R.id.de_angela_dorothea_merkel);
-        RadioButton radio2 = findViewById(R.id.de_alexander_van_der_bellen);
-        RadioButton radio3 = findViewById(R.id.de_frank_walter_steinmeier_pr);
-
-        if (radio1.isChecked()) {
-            radio1.setBackgroundColor(colorRed);
-        } else if (radio2.isChecked()) {
-            radio2.setBackgroundColor(colorRed);
-        } else if (radio3.isChecked()) {
-            radio3.setBackgroundColor(colorGreen);
+        if (deRadio1.isChecked()) {
+            deRadio1.setBackgroundColor(colorRed);
+        } else if (deRadio2.isChecked()) {
+            deRadio2.setBackgroundColor(colorRed);
+        } else if (deRadio3.isChecked()) {
+            deRadio3.setBackgroundColor(colorGreen);
             total += 1;
         }
     }
@@ -172,17 +228,13 @@ public class MainActivity extends AppCompatActivity {
      *  Question 6
      */
     private void itRadio() {
-        RadioButton radio1 = findViewById(R.id.it_sergio_mattarella_pr);
-        RadioButton radio2 = findViewById(R.id.it_michael_daniel_higgins);
-        RadioButton radio3 = findViewById(R.id.it_dalia_grybauskaite);
-
-        if (radio1.isChecked()) {
-            radio1.setBackgroundColor(colorGreen);
+        if (itRadio1.isChecked()) {
+            itRadio1.setBackgroundColor(colorGreen);
             total += 1;
-        } else if (radio2.isChecked()) {
-            radio2.setBackgroundColor(colorRed);
-        } else if (radio3.isChecked()) {
-            radio3.setBackgroundColor(colorRed);
+        } else if (itRadio2.isChecked()) {
+            itRadio2.setBackgroundColor(colorRed);
+        } else if (itRadio3.isChecked()) {
+            itRadio3.setBackgroundColor(colorRed);
         }
     }
 
@@ -190,16 +242,12 @@ public class MainActivity extends AppCompatActivity {
      *  Question 7
      */
     private void lvRadio() {
-        RadioButton radio1 = findViewById(R.id.lv_igor_dodon);
-        RadioButton radio2 = findViewById(R.id.lv_hashim_thaci);
-        RadioButton radio3 = findViewById(R.id.lv_raimonds_vejonis_pr);
-
-        if (radio1.isChecked()) {
-            radio1.setBackgroundColor(colorRed);
-        } else if (radio2.isChecked()) {
-            radio2.setBackgroundColor(colorRed);
-        } else if (radio3.isChecked()) {
-            radio3.setBackgroundColor(colorGreen);
+        if (lvRadio1.isChecked()) {
+            lvRadio1.setBackgroundColor(colorRed);
+        } else if (lvRadio2.isChecked()) {
+            lvRadio2.setBackgroundColor(colorRed);
+        } else if (lvRadio3.isChecked()) {
+            lvRadio3.setBackgroundColor(colorGreen);
             total += 1;
         }
     }
@@ -208,17 +256,13 @@ public class MainActivity extends AppCompatActivity {
      *  Question 8
      */
     private void plRadio() {
-        RadioButton radio1 = findViewById(R.id.pl_rumen_georgiew_radew);
-        RadioButton radio2 = findViewById(R.id.pl_andrzej_sebastian_duda_pr);
-        RadioButton radio3 = findViewById(R.id.pl_prokopis_pawlopulos);
-
-        if (radio1.isChecked()) {
-            radio1.setBackgroundColor(colorRed);
-        } else if (radio2.isChecked()) {
-            radio2.setBackgroundColor(colorGreen);
+        if (plRadio1.isChecked()) {
+            plRadio1.setBackgroundColor(colorRed);
+        } else if (plRadio2.isChecked()) {
+            plRadio2.setBackgroundColor(colorGreen);
             total += 1;
-        } else if (radio3.isChecked()) {
-            radio3.setBackgroundColor(colorRed);
+        } else if (plRadio3.isChecked()) {
+            plRadio3.setBackgroundColor(colorRed);
         }
     }
 
@@ -226,17 +270,13 @@ public class MainActivity extends AppCompatActivity {
      *  Question 9
      */
     private void uaRadio() {
-        RadioButton radio1 = findViewById(R.id.ua_ader_janos);
-        RadioButton radio2 = findViewById(R.id.ua_backpetro_oleksijowycz_poroszenko_pr);
-        RadioButton radio3 = findViewById(R.id.ua_backborut_pahor);
-
-        if (radio1.isChecked()) {
-            radio1.setBackgroundColor(colorRed);
-        } else if (radio2.isChecked()) {
-            radio2.setBackgroundColor(colorGreen);
+        if (uaRadio1.isChecked()) {
+            uaRadio1.setBackgroundColor(colorRed);
+        } else if (uaRadio2.isChecked()) {
+            uaRadio2.setBackgroundColor(colorGreen);
             total += 1;
-        } else if (radio3.isChecked()) {
-            radio3.setBackgroundColor(colorRed);
+        } else if (uaRadio3.isChecked()) {
+            uaRadio3.setBackgroundColor(colorRed);
         }
     }
 
@@ -291,25 +331,40 @@ public class MainActivity extends AppCompatActivity {
      * Saves and restores data when changing the orientation of the screen
      *
      */
+
+    static final String STATE_SUBMIT_COUNTER = "submitCounter";
+    static final String STATE_NAME = "userName";
+    static final String STATE_COUNCIL_PRESIDENT = "CouncilPresident";
+    static final String STATE_BOX1 = "checkBox1";
+    static final String STATE_BOX2 = "checkBox2";
+    static final String STATE_BOX3 = "checkBox3";
+    static final String STATE_FR = "frGroupChoice";
+    static final String STATE_CZ = "czGroupChoice";
+    static final String STATE_DE = "deGroupChoice";
+    static final String STATE_IT = "itGroupChoice";
+    static final String STATE_LV = "lvGroupChoice";
+    static final String STATE_PL = "plGroupChoice";
+    static final String STATE_UA = "uaGroupChoice";
+
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
 
-        submitCounter = savedInstanceState.getInt("submitCounter");
+        submitCounter = savedInstanceState.getInt(STATE_SUBMIT_COUNTER);
 
-        editTextName.setText(savedInstanceState.getString("CustomerName"));
-        editTextCouncilPresident.setText(savedInstanceState.getString("CouncilPresident"));
+        editTextName.setText(savedInstanceState.getString(STATE_NAME));
+        editTextCouncilPresident.setText(savedInstanceState.getString(STATE_COUNCIL_PRESIDENT));
 
-        box1.setChecked(savedInstanceState.getBoolean("box1"));
-        box2.setChecked(savedInstanceState.getBoolean("box2"));
-        box3.setChecked(savedInstanceState.getBoolean("box3"));
+        box1.setChecked(savedInstanceState.getBoolean(STATE_BOX1));
+        box2.setChecked(savedInstanceState.getBoolean(STATE_BOX2));
+        box3.setChecked(savedInstanceState.getBoolean(STATE_BOX3));
 
-        frGroup.check(savedInstanceState.getInt("FR"));
-        czGroup.check(savedInstanceState.getInt("CZ"));
-        deGroup.check(savedInstanceState.getInt("DE"));
-        itGroup.check(savedInstanceState.getInt("IT"));
-        lvGroup.check(savedInstanceState.getInt("LV"));
-        plGroup.check(savedInstanceState.getInt("PL"));
-        uaGroup.check(savedInstanceState.getInt("UA"));
+        frGroup.check(savedInstanceState.getInt(STATE_FR));
+        czGroup.check(savedInstanceState.getInt(STATE_CZ));
+        deGroup.check(savedInstanceState.getInt(STATE_DE));
+        itGroup.check(savedInstanceState.getInt(STATE_IT));
+        lvGroup.check(savedInstanceState.getInt(STATE_LV));
+        plGroup.check(savedInstanceState.getInt(STATE_PL));
+        uaGroup.check(savedInstanceState.getInt(STATE_UA));
 
         if (submitCounter != 0) {
             allMethods();
@@ -318,22 +373,22 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
-        outState.putInt("submitCounter", submitCounter);
+        outState.putInt(STATE_SUBMIT_COUNTER, submitCounter);
 
-        outState.putString("CustomerName", editTextName.getText().toString());
-        outState.putString("CouncilPresident", editTextCouncilPresident.getText().toString());
+        outState.putString(STATE_NAME, editTextName.getText().toString());
+        outState.putString(STATE_COUNCIL_PRESIDENT, editTextCouncilPresident.getText().toString());
 
-        outState.putBoolean("box1", box1.isChecked());
-        outState.putBoolean("box2", box2.isChecked());
-        outState.putBoolean("box3", box3.isChecked());
+        outState.putBoolean(STATE_BOX1, box1.isChecked());
+        outState.putBoolean(STATE_BOX2, box2.isChecked());
+        outState.putBoolean(STATE_BOX3, box3.isChecked());
 
-        outState.putInt("FR", frGroup.getCheckedRadioButtonId());
-        outState.putInt("CZ", czGroup.getCheckedRadioButtonId());
-        outState.putInt("DE", deGroup.getCheckedRadioButtonId());
-        outState.putInt("IT", itGroup.getCheckedRadioButtonId());
-        outState.putInt("LV", lvGroup.getCheckedRadioButtonId());
-        outState.putInt("PL", plGroup.getCheckedRadioButtonId());
-        outState.putInt("UA", uaGroup.getCheckedRadioButtonId());
+        outState.putInt(STATE_FR, frGroup.getCheckedRadioButtonId());
+        outState.putInt(STATE_CZ, czGroup.getCheckedRadioButtonId());
+        outState.putInt(STATE_DE, deGroup.getCheckedRadioButtonId());
+        outState.putInt(STATE_IT, itGroup.getCheckedRadioButtonId());
+        outState.putInt(STATE_LV, lvGroup.getCheckedRadioButtonId());
+        outState.putInt(STATE_PL, plGroup.getCheckedRadioButtonId());
+        outState.putInt(STATE_UA, uaGroup.getCheckedRadioButtonId());
 
         super.onSaveInstanceState(outState);
     }
